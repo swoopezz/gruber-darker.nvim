@@ -76,7 +76,7 @@ M.highlights.float = Highlight.new("@float", { link = vim_hl.float })
 ---Function definitions
 M.highlights.func = Highlight.new("@function", { link = vim_hl.func })
 ---Built-in functions
-M.highlights.func_builtin = Highlight.new("@function.builtin", { link = gruber_hl.yellow })
+M.highlights.func_builtin = Highlight.new("@function.builtin", { link = gruber_hl.yellow_bold })
 ---Function calls
 -- M.highlights.func_call = Highlight.new("@function.call", {})
 ---Preprocessor macros
@@ -95,9 +95,10 @@ M.highlights.parameter = Highlight.new("@parameter", { link = vim_hl.identifier 
 -- Keywords
 
 ---various keywords
-M.highlights.keyword = Highlight.new("@keyword", { link = vim_hl.keyword })
+M.highlights.keyword = Highlight.new("@keyword", { link = gruber_hl.yellow_bold })
 ---keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
--- M.highlights.keyword_coroutine = Highlight.new("@keyword.coroutine", {})
+M.highlights.keyword_auto = Highlight.new("@keyword.auto", {link = gruber_hl.yellow_bold })
+--
 ---keywords that define a function (e.g. `func` in Go, `def` in Python)
 -- M.highlights.keyword_function = Highlight.new("@keyword.function", {})
 ---operators that are English words (e.g. `and` / `or`)
@@ -106,10 +107,9 @@ M.highlights.keyword = Highlight.new("@keyword", { link = vim_hl.keyword })
 -- M.highlights.keyword_return = Highlight.new("@keyword.return", {})
 
 ---keywords related to conditionals (e.g. `if` / `else`)
-M.highlights.conditional = Highlight.new("@conditional", { fg = c.yellow })
+M.highlights.conditional = Highlight.new("@conditional", { fg = c.yellow_bold })
 ---ternary operator (e.g. `?` / `:`)
 M.highlights.conditional_ternary = Highlight.new("@conditional.ternary", {})
-
 ---keywords related to loops (e.g. `for` / `while`)
 M.highlights.repeats = Highlight.new("@repeat", { link = vim_hl.repeats })
 ---keywords related to debugging
@@ -124,9 +124,9 @@ M.highlights.label = Highlight.new("@label", { link = vim_hl.label })
 -- Types
 
 ---type or class definitions and annotations
-M.highlights.type = Highlight.new("@type", { link = vim_hl.type })
+M.highlights.type = Highlight.new("@type", { link = vim_hl.yellow_bold })
 ---built-in types
-M.highlights.type_builtin = Highlight.new("@type.builtin", { link = gruber_hl.yellow })
+M.highlights.type_builtin = Highlight.new("@type.builtin", { link = gruber_hl.yellow_bold })
 ---type definitions (e.g. `typedef` in C)
 M.highlights.type_definition = Highlight.new("@type.definition", { link = vim_hl.typedef })
 ---type qualifiers (e.g. `const`)
@@ -138,7 +138,7 @@ M.highlights.storage_class = Highlight.new("@storageclass", { link = vim_hl.stor
 -- I don't think this is supported anymore...
 -- M.highlights.attribute = Highlight.new("@attribute", { link = gruber_hl.brown })
 ---object and struct fields
-M.highlights.field = Highlight.new("@field", { link = gruber_hl.niagara })
+M.highlights.field = Highlight.new("@field", { link = gruber_hl.niagara_bold })
 ---similar to `@field`
 M.highlights.property = Highlight.new("@property", { link = gruber_hl.dark_niagara })
 
@@ -147,12 +147,12 @@ M.highlights.property = Highlight.new("@property", { link = gruber_hl.dark_niaga
 ---various variable names
 M.highlights.variable = Highlight.new("@variable", { link = vim_hl.identifier })
 ---built-in variable names (e.g. `this`)
-M.highlights.variable_builtin = Highlight.new("@variable.builtin", { link = gruber_hl.yellow })
+M.highlights.variable_builtin = Highlight.new("@variable.builtin", { link = gruber_hl.yellow_bold })
 
 ---constant identifiers
 M.highlights.constant = Highlight.new("@constant", { link = vim_hl.constant })
 ---built-in constant values
-M.highlights.constant_builtin = Highlight.new("@constant.builtin", { link = gruber_hl.yellow })
+M.highlights.constant_builtin = Highlight.new("@constant.builtin", { link = gruber_hl.yellow_bold })
 ---constants defined by the preprocessor
 M.highlights.constant_macro = Highlight.new("@constant.macro", { link = vim_hl.define })
 

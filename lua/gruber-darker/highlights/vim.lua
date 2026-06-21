@@ -188,7 +188,7 @@ M.highlights.identifier = Highlight.new("Identifier", { link = gruber_hl.fg1 })
 ---Function name (also: methods for classes)
 M.highlights.func = Highlight.new("Function", { link = gruber_hl.niagara })
 ---(preferred) any statement
-M.highlights.statement = Highlight.new("Statement", { fg = c.yellow })
+M.highlights.statement = Highlight.new("Statement", { fg = c.yellow, bold = opts.bold })
 ---If, then, else, endif, switch, etc.
 M.highlights.conditional = Highlight.new("Conditional", { link = gruber_hl.yellow_bold })
 ---For, do, while, etc.
@@ -212,7 +212,7 @@ M.highlights.macro = Highlight.new("Macro", { link = gruber_hl.quartz })
 ---Preprocessor #if, #else, #endif, etc.
 M.highlights.pre_condit = Highlight.new("PreCondit", { link = gruber_hl.quartz })
 ---(preferred) int, long, char, etc.
-M.highlights.type = Highlight.new("Type", { link = gruber_hl.quartz })
+M.highlights.type = Highlight.new("Type", { link = gruber_hl.quartz})
 ---Static, register, volatile, etc.
 M.highlights.storage_class = Highlight.new("StorageClass", { link = gruber_hl.yellow_bold })
 ---Struct, union, enum, etc.
