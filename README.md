@@ -13,19 +13,12 @@ _A modern Neovim port of a deftheme [adaptation][gruber-darker-theme] of an Emac
 ### Lazy (recommended)
 
 ```lua
-{ "blazkowolf/gruber-darker.nvim" }
-```
-
-### Packer
-
-```lua
-use "blazkowolf/gruber-darker.nvim"
-```
-
-### Plug
-
-```vim
-Plug 'blazkowolf/gruber-darker.nvim'
+return { 
+	'swoopezz/gruber-darker.nvim',
+	dependencies = {
+		'nvim-treesitter/nvim-treesitter' --optional
+	}
+}
 ```
 
 Then, somewhere in your `init.lua`, set the colorscheme
